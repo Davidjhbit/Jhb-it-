@@ -1,0 +1,102 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: red;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+  }
+  nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: orangered;
+  }
+  nav a {
+background-image: radial-gradient(yellow);
+    display: inline-block;
+    padding: 14px 20px;
+    text-decoration: maroon;
+    color: black;
+  }
+  nav a:hover {
+    background-color: blue;
+  }
+  section {
+    padding: 20px;
+  }
+  footer {
+    background-color: #333;
+    color: red;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Student Profile</h1>
+</header>
+
+<nav id="menu">
+  <a href="#about">About Me</a>
+  <a href="#hobbies">Hobbies</a>
+  <a href="#vision">Vision</a>
+  <a href="#contact">Contact Details</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>My name is David Olunuga. I am in 6th grade and 11 years old.</p>
+</section>
+
+<section id="hobbies">
+  <h2>Hobbies</h2>
+  <p>I like playing video games, Reading, and having fun with my friends.</p>
+</section>
+
+<section id="vision">
+  <h2>Vision</h2>
+  <p>When i grow up, I want to be a FireFighter.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact Details</h2>
+  <p>Google Email, davidolunuga94@gmail.com. 
+</section>
+
+<footer>
+  <p>&copy; 2024 Student Profile</p>
+</footer>
+
+<script>
+  // Auto-scrolling functionality for the horizontal menu
+  document.addEventListener('DOMContentLoaded', function() {
+    const menu = document.getElementById('menu');
+    menu.addEventListener('click', function(event) {
+      const target = event.target;
+      if (target.tagName === 'A') {
+        const sectionId = target.getAttribute('href').substring(1);
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+        event.preventDefault();
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
